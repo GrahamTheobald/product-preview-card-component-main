@@ -1,0 +1,143 @@
+:root{
+    --div-width: 300px;
+    --div-height: 450px;
+
+    --white: hsl(0, 0%, 100%);
+    --cream: hsl(30, 38%, 92%);
+    --grey: hsl(228, 12%, 48%);
+    --cyan: hsl(158, 36%, 37%);
+
+    --border-radius: .6em;
+}
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font: inherit;
+    line-height: 1;
+    margin: 0;
+    overflow-wrap: break-word;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--cream);
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+.container {
+    display: flex;
+    height: var(--div-height);
+    border-radius: var(--border-radius);
+
+    background-color: var(--white);
+}
+
+.image-side {
+    background-image: url('./images/image-product-desktop.jpg');
+    background-size: 100%;
+    max-width: var(--div-width);
+    width: var(--div-width);
+
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    
+}
+
+.text-side {
+    max-width: var(--div-width);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description {
+    line-height: 1.5;
+}
+
+.price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.current-price {
+    color: var(--cyan);
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.button {
+    display: flex; 
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem; 
+    border:none;
+    outline:none;
+    border-radius: var(--border-radius);
+
+    color: var(--white);
+    background-color: var(--cyan);
+
+}
+
+.accent {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.grey {
+    color: var(--grey);
+}
+
+@media(max-width: 600px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 90vh;
+        width: 80vw
+
+    }
+
+    .image-side {
+        height: 40vh;
+      
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+        background-size: 100%;
+        background-position-y:50%;
+    
+
+        width:100%;
+        max-width: 100%;
+
+    }
+
+    .text-side {
+        flex: 1.8;
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+}
