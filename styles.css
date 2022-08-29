@@ -6,6 +6,7 @@
     --cream: hsl(30, 38%, 92%);
     --grey: hsl(228, 12%, 48%);
     --cyan: hsl(158, 36%, 37%);
+    --dark-cyan: hsl(158, 36%, 20%);
 
     --border-radius: .6em;
 }
@@ -94,11 +95,19 @@ body {
     border:none;
     outline:none;
     border-radius: var(--border-radius);
+    font-weight: inherit;
+    font-size: 1rem;
 
     color: var(--white);
     background-color: var(--cyan);
 
 }
+
+.button:hover, .button:focus {
+    cursor: pointer;
+    background-color: var(--dark-cyan);
+}
+
 
 .accent {
     font-family: Fraunces;
